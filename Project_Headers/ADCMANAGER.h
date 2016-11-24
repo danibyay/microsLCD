@@ -39,4 +39,12 @@ void ADC_Init(void);
 -------------------------------------------------------------------------------------------------*/
 u8 ADC_Read(void);
 
+/*!*-----------------------------------------------------------------------------------------------
+* \name     ADC_isDataReady
+* \brief    reads COCO FLAG to determine if the data conversion is complete
+* \param    void
+* \return   bool, true or false
+-------------------------------------------------------------------------------------------------*/
+bool ADC_isDataReady(void);
+
 #endif /* ADC */

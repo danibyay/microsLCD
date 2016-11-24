@@ -25,10 +25,17 @@ void ADC_Init(void)
 
 u8 ADC_Read(void)
 {
-  if(ADCSC1_COCO)
-  {
     return ADCRL;
-  }
 }
 //-------------------------------------------------------------------------------------------------
-
+bool ADC_isDataReady(void)
+{
+	if(ADCSC1_COCO)
+	{
+		return M_TRUE;
+	}
+	else
+	{
+		return M_FALSE;
+	}
+}

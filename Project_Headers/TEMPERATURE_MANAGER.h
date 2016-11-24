@@ -40,4 +40,12 @@ u16 TEMPERATURE_Read(void);
 * \return   void
 -------------------------------------------------------------------------------------------------*/
 
+bool Temperature_isDataReady(void);
+/*!*-----------------------------------------------------------------------------------------------
+* \name     Temperature_isDataReady
+* \brief    if the ADC data is ready, returns true, or else, false.
+* \param    void
+* \return   bool
+-------------------------------------------------------------------------------------------------*/
+
 #endif /* ADC */

@@ -19,7 +19,7 @@
 u16 TEMPERATURE_Read()
 {
 	u16 temp;
-	temp=(u16)((u32)ADC_Read()*13);
+	temp= (u16)((u32)ADC_Read()*13);
 	return 	temp;
 
 }
@@ -27,5 +27,10 @@ u16 TEMPERATURE_Read()
 void TEMPERATURE_Init()
 {
 	ADC_Init();
+}
+
+bool Temperature_isDataReady()
+{
+	return ADC_isDataReady();
 }
 //-------------------------------------------------------------------------------------------------

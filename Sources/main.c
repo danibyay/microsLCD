@@ -116,7 +116,10 @@ void main(void)
 	    TimersMngr_PeriodicTask();
 	    TimersMngr_UpdateCount();
 	    
-	    systemTemp=TEMPERATURE_Read();
+	    if(Temperature_isDataReady())
+	    {
+		    systemTemp=TEMPERATURE_Read();
+	    }
 	    // MOTOR
 	    if(TimersMngr_TimerHasElapsed(motorTimerID))
 	        {

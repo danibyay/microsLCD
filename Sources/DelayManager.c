@@ -26,16 +26,15 @@ u8 DelayManager_Init(u16 time)
 u16 DelayManager_getTimeUs(u16 rps)
 {
 	u16 time;
-	u16 a;
-	a=((u32)STEPS * rps);
-	a=(u16) (SCALE/a);
-	if(a > MIN_SPEED)
+	time=((u32)STEPS * rps);
+	time=(u16) (SCALE/time);
+	if(time > MIN_SPEED)
 	{
 		return MIN_SPEED;
 	}
-	else if(a < MAX_SPEED)
+	else if(time < MAX_SPEED)
 	{
 		return MAX_SPEED;
 	}
-	return a;
+	return time;
 }
