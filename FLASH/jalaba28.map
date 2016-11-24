@@ -18,7 +18,7 @@ DirectionManager_c.obj                  Model: SMALL,         Lang: ANSI-C
 LCDManager_c.obj                        Model: SMALL,         Lang: ANSI-C
 MTIM_c.obj                              Model: SMALL,         Lang: ANSI-C
 MessageManager_c.obj                    Model: SMALL,         Lang: ANSI-C
-MotorStringManager_c.obj                Model: SMALL,         Lang: ANSI-C
+MotorManager_c.obj                      Model: SMALL,         Lang: ANSI-C
 SCI_c.obj                               Model: SMALL,         Lang: ANSI-C
 StringUtilis_c.obj                      Model: SMALL,         Lang: ANSI-C
 TEMPERATURE_MANAGER_c.obj               Model: SMALL,         Lang: ANSI-C
@@ -212,7 +212,7 @@ MODULE:                 -- MessageManager_c.obj --
      MsgManagerBuffer1_isFull                   195       1       1       5   .bss        
      MsgManagerBuffer2_isFull                   196       1       1       4   .bss        
      RxIndex                                    197       1       1       4   .bss        
-MODULE:                 -- MotorStringManager_c.obj --
+MODULE:                 -- MotorManager_c.obj --
 - PROCEDURES:
      MotorStringManager_Init                   E3BD      3D      61       1   .text       
      MotorStringManager_RotateCounterClockwise       E3FA      48      72       1   .text       
@@ -418,7 +418,7 @@ MODULE STATISTIC
   LCDManager_c.obj                            29    208     14
   MTIM_c.obj                                   2     32      2
   MessageManager_c.obj                        81    351      0
-  MotorStringManager_c.obj                    33    205      0
+  MotorManager_c.obj                          33    205      0
   SCI_c.obj                                   31    144      4
   StringUtilis_c.obj                           0    422      0
   TEMPERATURE_MANAGER_c.obj                    0     16      0

@@ -12,7 +12,7 @@
 
 #include <hidef.h> /* for EnableInterrupts macro */
 #include "derivative.h" /* include peripheral declarations */
-#include "MotorStringManager.h"
+#include "MotorManager.h"
 #include "TEMPERATURE_MANAGER.h"
 #include "DelayManager.h"
 #include "DirectionManager.h"

@@ -13,7 +13,7 @@
 
 /*********************						Includes						**********************/
 #include "GPIO.h"
-#include "MotorStringManager.h"
+#include "MotorManager.h"
 
 /*********************						Defines							**********************/
 

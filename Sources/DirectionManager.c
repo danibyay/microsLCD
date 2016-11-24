@@ -9,7 +9,7 @@
 /*********************				   Includes					**********************/
 #include "GPIO.h"
 #include "DirectionManager.h"
-#include "MotorStringManager.h"
+#include "MotorManager.h"
 #include "types.h"
 
 /*********************				   Defines					**********************/

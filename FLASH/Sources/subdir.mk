@@ -13,7 +13,7 @@ C_SRCS_QUOTED += \
 "../Sources/LCDManager.c" \
 "../Sources/MTIM.c" \
 "../Sources/MessageManager.c" \
-"../Sources/MotorStringManager.c" \
+"../Sources/MotorManager.c" \
 "../Sources/SCI.c" \
 "../Sources/StringUtilis.c" \
 "../Sources/TEMPERATURE_MANAGER.c" \
@@ -28,7 +28,7 @@ C_SRCS += \
 ../Sources/LCDManager.c \
 ../Sources/MTIM.c \
 ../Sources/MessageManager.c \
-../Sources/MotorStringManager.c \
+../Sources/MotorManager.c \
 ../Sources/SCI.c \
 ../Sources/StringUtilis.c \
 ../Sources/TEMPERATURE_MANAGER.c \
@@ -43,7 +43,7 @@ OBJS += \
 ./Sources/LCDManager_c.obj \
 ./Sources/MTIM_c.obj \
 ./Sources/MessageManager_c.obj \
-./Sources/MotorStringManager_c.obj \
+./Sources/MotorManager_c.obj \
 ./Sources/SCI_c.obj \
 ./Sources/StringUtilis_c.obj \
 ./Sources/TEMPERATURE_MANAGER_c.obj \
@@ -58,7 +58,7 @@ OBJS_QUOTED += \
 "./Sources/LCDManager_c.obj" \
 "./Sources/MTIM_c.obj" \
 "./Sources/MessageManager_c.obj" \
-"./Sources/MotorStringManager_c.obj" \
+"./Sources/MotorManager_c.obj" \
 "./Sources/SCI_c.obj" \
 "./Sources/StringUtilis_c.obj" \
 "./Sources/TEMPERATURE_MANAGER_c.obj" \
@@ -73,7 +73,7 @@ C_DEPS += \
 ./Sources/LCDManager_c.d \
 ./Sources/MTIM_c.d \
 ./Sources/MessageManager_c.d \
-./Sources/MotorStringManager_c.d \
+./Sources/MotorManager_c.d \
 ./Sources/SCI_c.d \
 ./Sources/StringUtilis_c.d \
 ./Sources/TEMPERATURE_MANAGER_c.d \
@@ -88,7 +88,7 @@ C_DEPS_QUOTED += \
 "./Sources/LCDManager_c.d" \
 "./Sources/MTIM_c.d" \
 "./Sources/MessageManager_c.d" \
-"./Sources/MotorStringManager_c.d" \
+"./Sources/MotorManager_c.d" \
 "./Sources/SCI_c.d" \
 "./Sources/StringUtilis_c.d" \
 "./Sources/TEMPERATURE_MANAGER_c.d" \
@@ -103,7 +103,7 @@ OBJS_OS_FORMAT += \
 ./Sources/LCDManager_c.obj \
 ./Sources/MTIM_c.obj \
 ./Sources/MessageManager_c.obj \
-./Sources/MotorStringManager_c.obj \
+./Sources/MotorManager_c.obj \
 ./Sources/SCI_c.obj \
 ./Sources/StringUtilis_c.obj \
 ./Sources/TEMPERATURE_MANAGER_c.obj \
@@ -173,11 +173,11 @@ Sources/MessageManager_c.obj: ../Sources/MessageManager.c
 	@echo 'Finished building: $<'
 	@echo ' '
 
-Sources/MotorStringManager_c.obj: ../Sources/MotorStringManager.c
+Sources/MotorManager_c.obj: ../Sources/MotorManager.c
 	@echo 'Building file: $<'
 	@echo 'Executing target #8 $<'
 	@echo 'Invoking: HCS08 Compiler'
-	"$(HC08ToolsEnv)/chc08" -ArgFile"Sources/MotorStringManager.args" -ObjN="Sources/MotorStringManager_c.obj" "$<" -Lm="$(@:%.obj=%.d)" -LmCfg=xilmou
+	"$(HC08ToolsEnv)/chc08" -ArgFile"Sources/MotorManager.args" -ObjN="Sources/MotorManager_c.obj" "$<" -Lm="$(@:%.obj=%.d)" -LmCfg=xilmou
 	@echo 'Finished building: $<'
 	@echo ' '
 

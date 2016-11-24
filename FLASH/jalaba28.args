@@ -11,7 +11,7 @@
 "$(ProjDirPath)/FLASH/Sources/LCDManager_c.obj"
 "$(ProjDirPath)/FLASH/Sources/MTIM_c.obj"
 "$(ProjDirPath)/FLASH/Sources/MessageManager_c.obj"
-"$(ProjDirPath)/FLASH/Sources/MotorStringManager_c.obj"
+"$(ProjDirPath)/FLASH/Sources/MotorManager_c.obj"
 "$(ProjDirPath)/FLASH/Sources/SCI_c.obj"
 "$(ProjDirPath)/FLASH/Sources/StringUtilis_c.obj"
 "$(ProjDirPath)/FLASH/Sources/TEMPERATURE_MANAGER_c.obj"
