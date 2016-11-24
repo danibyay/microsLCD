@@ -123,7 +123,7 @@ void main(void)
 	    // MOTOR
 	    if(TimersMngr_TimerHasElapsed(motorTimerID))
 	        {
-	    			if(motorState == ON )
+	    			if(motorState == ON & systemTemp<temperatureLimit)
 	    			{
 		    			DirectionManager_Move();
 	    			}
@@ -202,7 +202,7 @@ void main(void)
 	    			{
 		    			degrees = (u32)tempDeg*100 ;
 		    			TimersMngr_StartTimer(motorTimerID, variableStepperTime);
-		    			while(degrees > DEGREES_HALF_STEP)
+		    			while(degrees > DEGREES_HALF_STEP) 
 		    			{
 		    				__RESET_WATCHDOG();
 	    				    TimersMngr_PeriodicTask();

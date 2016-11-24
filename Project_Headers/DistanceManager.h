@@ -2,7 +2,7 @@
  * DistanceManager.h
  *
  *  Created on: Nov 1, 2016
- *      Author: Daniela, Jesus
+ *      Author: Daniela Becerra, Jesus Martin
  */
 
 #ifndef DISTANCEMANAGER_H_
