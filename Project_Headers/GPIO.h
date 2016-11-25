@@ -40,7 +40,7 @@
 #define GPIO_DIR(port)							PT##port##DD					/* Defines the port direction register */
 /*************************************************************************************************/
 
-/* Macros to configure pin directin */
+/* Macros to configure pin direction */
 #define GPIO_CONFIG_OUT(port, pin)				GPIO_CONFIG_DIR_EXPANDED(port, pin, GPIO_DIR_OUT) /* Sets port-pin as output */
 #define GPIO_CONFIG_IN(port, pin)				GPIO_CONFIG_DIR_EXPANDED(port, pin, GPIO_DIR_IN)  /* Sets port-pin as input */
 #define GPIO_CONFIG_DIR_EXPANDED(port,pin,dir)  (GPIO_PIN_DD(port, pin) = dir)

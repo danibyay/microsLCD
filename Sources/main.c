@@ -80,6 +80,7 @@ const u8 msgDistance[] = "DIST:";
 const u8 optDistanceSize = 4;
 u16 tempDg;
 const u8 twoNumAfterDec = 2;
+const u8 numAfterDec = 1;
 
 void tryAgain(void)
 {
@@ -162,7 +163,7 @@ void main(void)
 		    {
 		    	u16 tempRps;
 		    	MsgManager_updateSpeed(&currMsg[msgRpsSize+2]);
-		    	if(StringUtils_Str2Num(&currMsg[msgRpsSize], optRpsSize, 1, &tempRps))
+		    	if(StringUtils_Str2Num(&currMsg[msgRpsSize], optRpsSize, numAfterDec, &tempRps))
 		    	{
 					variableStepperTime = DelayManager_getTimeUs(tempRps); 
 					msgSuccess = M_TRUE;
@@ -191,6 +192,20 @@ void main(void)
 	    		}
 	    		MsgManager_updateDir(motorDirection);
 	    	}
+	    	//Temperature Limit command
+	    	else if(StringUtils_strcmp(currMsg, msgTempLim, msgTempLimSize))
+	    	{
+	       		u16 tempTempLim;
+	      		if(StringUtils_Str2Num(&currMsg[msgTempLimSize], optTempLimSize, numAfterDec, &tempTempLim))
+	       		{
+	       			temperatureLimit=tempTempLim;
+	       			msgSuccess = M_TRUE;   			
+	    		}
+	    		else
+	    		{
+	    		  	tryAgain();
+	    		}
+	        }
 	    	else if(motorState==OFF)
 	    	{
 	    		//DEGREES COMMAND CLOCK WISE
